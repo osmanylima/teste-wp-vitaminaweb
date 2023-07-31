@@ -1,0 +1,17 @@
+form {
+  .form-control {
+    border-radius: 100px;
+    border: 1px solid rgba($secondary, 0.2);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  button {
+    line-height: 1.5;
+    width: 100%;
+  }
+}

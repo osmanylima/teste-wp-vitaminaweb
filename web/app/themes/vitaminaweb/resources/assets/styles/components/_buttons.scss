@@ -1,0 +1,13 @@
+.btn {
+  border-radius: 100px !important;
+  padding: 20px 30px;
+  line-height: 1.1;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:focus,
+  &.focus,
+  &:active {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,20 @@
+.banner .nav li {
+  @extend .nav-item;
+  @extend .nav-link;
+}
+
+.banner .nav a {
+  @extend .transition;
+  @extend .fw-600;
+  @extend .lh-1;
+  color: $white;
+  position: relative;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.banner {
+  position: relative;
+}

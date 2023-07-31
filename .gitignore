@@ -1,0 +1,57 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+!web/app/plugins/advanced-custom-fields-pro/
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+*.gitkeep
+
+# WordPress
+web/.htaccess
+public
+web/app/languages
+web/wp
+web/wp/*
+.env
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+vendor/*
+!vendor/.gitkeep
+
+#Outros
+**/.DS_Store
+.idea
+*.log
+*.DS_Store
+web/**/*.DS_Store
+
+#Arquivos
+*.log
+/.htaccess
+/license.txt
+/readme.html
+/sitemap.xml
+
+#Wordfence
+web/wordfence-waf.php
+web/.user.ini
+
+# WP-CLI
+wp-cli.local.yml
+
+#Themes
+!web/app/themes/vitaminaweb/
+web/app/themes/vitaminaweb/.cache-loader
+web/app/themes/vitaminaweb/node_modules
+web/app/themes/vitaminaweb/vendor

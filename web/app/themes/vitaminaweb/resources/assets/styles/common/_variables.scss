@@ -1,0 +1,79 @@
+// Note: Bootstrap 5 ships with its own default theme colors
+// Primary and secondary color
+$primary: #9d153d;
+$secondary: #141e27;
+$terciary: #e5e5e5;
+
+// Font Family
+$font-family-base: 'Noto Sans', sans-serif;
+$font-family-inter: 'Inter', sans-serif;
+
+// Typography
+$font-sizes: (
+  12: 12px,
+  14: 14px,
+  16: 16px,
+  18: 18px,
+  20: 20px,
+  22: 22px,
+  24: 24px,
+  25: 25px,
+  26: 26px,
+  36: 36px,
+  40: 40px,
+  45: 45px,
+);
+
+// Line Height
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+// Spacers
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 4.5,
+);
+
+.transition {
+  transition: 0.3s ease all;
+}
+
+.dots {
+  display: flex;
+  margin: 30px auto 0;
+  padding: 0;
+  justify-content: center;
+
+  button {
+    border: none;
+    text-indent: -9000em;
+    border-radius: 100px;
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border: 1px solid rgba($secondary, 0.2);
+    background-color: transparent;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 5px;
+    height: 12px;
+
+    &.slick-active button {
+      background-color: $secondary;
+    }
+  }
+}
+
+div.border-bottom {
+  border-color: rgba($secondary, 0.2) !important;
+}
