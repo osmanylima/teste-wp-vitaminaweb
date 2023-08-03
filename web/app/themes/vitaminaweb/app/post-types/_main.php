@@ -1,3 +1,3 @@
 <?php 
 
-require('vitrine.php');
+// require('vitrine.php');

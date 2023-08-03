@@ -1,0 +1,50 @@
+footer {
+  background-image: url('../images/simbolo.svg');
+  background-color: $primary-light;
+  background-repeat: no-repeat;
+  background-position: center left;
+
+  h6 {
+    color: $blue-dark;
+    margin-bottom: 15px;
+    @extend .fs-17;
+  }
+  
+  p {
+    color: $secondary;
+    margin-bottom: 20px;
+    @extend .fs-14;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .nav {
+    @extend .d-grid;
+    @extend .gap-3;
+
+    li a {
+      color: $secondary;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .border-top {
+    border-color: $secondary;
+  }
+
+  .assinatura {
+    @extend .fs-10;
+    @extend .gap-2;
+    @extend .d-flex;
+    @extend .align-items-center;
+  }
+}

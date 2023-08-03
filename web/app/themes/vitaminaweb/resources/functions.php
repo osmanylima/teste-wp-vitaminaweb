@@ -137,20 +137,35 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'      => false,
         'icon_url'      => 'dashicons-admin-links',
     ));
-  }
+  } 
   
-  /**
-   * Destinado as configurações globais do projeto gerenciáveis apenas pelo
-   * painel administrativo do wordpress, apenas para super administradores.
-   */
-  if( function_exists('acf_add_options_page') ) {
-    acf_add_options_page(array(
-        'page_title'    => 'Configuração Global',
-        'menu_title'    => 'Configuração Global',
-        'menu_slug'     => 'global-configuration',
-        'capability'    => 'edit_posts',
-        'redirect'      => false,
-        'icon_url'      => 'dashicons-schedule',
-    ));
-  }
-  
+add_action( 'wp_footer', 'mycustom_wp_footer' );
+
+function mycustom_wp_footer() {
+?>
+    <script>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            var idEstado =  document.getElementById("estado").value;
+            setTimeout(function(){
+                if (idEstado == "Rio de Janeiro") {
+                    location = '/obrigado-rj';
+                } else if (idEstado) {
+                    location = '/obrigado';
+                }
+            }, 1000);
+        }, false );
+    </script>
+<?php
+}
+
+add_action('admin_head', 'admin_styles');
+function admin_styles() {  
+	?>
+	<style>
+		.h-100 .acf-editor-wrap iframe {			
+			min-height: 50px;
+			height: 50px !important;
+		}
+	</style>
+<?php
+}

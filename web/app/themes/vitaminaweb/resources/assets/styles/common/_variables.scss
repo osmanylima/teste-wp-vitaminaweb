@@ -1,27 +1,65 @@
 // Note: Bootstrap 5 ships with its own default theme colors
 // Primary and secondary color
-$primary: #9d153d;
-$secondary: #141e27;
-$terciary: #e5e5e5;
+$primary: #041b3a;
+$primary-light: #ebebeb;
+$secondary: #5f5f5f;
+$terciary: #85680d;
+$white: #fff;
+$gray-dark: #262626;
+$gray-light: #f4f4f4;
+$blue: #0068bc;
+$blue-dark: #005a9b;
 
 // Font Family
-$font-family-base: 'Noto Sans', sans-serif;
-$font-family-inter: 'Inter', sans-serif;
+$font-family-primary: 'gill_sansregular', sans-serif;
+$font-family-light: 'gillsans-lightlight', sans-serif;
+$font-family-secondary: 'andreaiiscriptupruploadedfile', sans-serif;
+$font-family-montserrat: 'Montserrat', sans-serif;;
+
+@font-face {
+  font-family: 'gill_sansregular';
+  src: url('../fonts/gill-sans-webfont.woff2') format('woff2'),
+       url('../fonts/gill-sans-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gillsans-lightlight';
+  src: url('../fonts/gillsans-light-webfont.woff2') format('woff2'),
+       url('../fonts/gillsans-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'andreaiiscriptupruploadedfile';
+  src: url('../fonts/andrea_ii_script_upright-webfont.woff2') format('woff2'),
+       url('../fonts/andrea_ii_script_upright-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 // Typography
 $font-sizes: (
+  10: 10px,
   12: 12px,
+  13: 13px,
   14: 14px,
   16: 16px,
+  17: 17px,
   18: 18px,
   20: 20px,
   22: 22px,
   24: 24px,
   25: 25px,
   26: 26px,
+  30: 30px,
+  35: 35px,
   36: 36px,
   40: 40px,
   45: 45px,
+  70: 70px,
 );
 
 // Line Height

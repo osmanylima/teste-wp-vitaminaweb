@@ -1,13 +1,63 @@
 .btn {
-  border-radius: 100px !important;
-  padding: 20px 30px;
-  line-height: 1.1;
+  color: $white;
+  @extend .fs-18;
+  line-height: 1;
+  border-radius: 5px;
+  padding: 15px 20px;
   text-decoration: none;
+  background-color: $blue;
   text-transform: uppercase;
+  font-family: $font-family-primary;
+  @include transition;
 
+  &-small {
+    color: $white;
+    padding: 10.5px 15px;
+    background-color: $blue;
+    font-size: 12px !important;
+  }
+
+  &-cta-white {
+    color: $secondary;
+    background-color: $white;
+  }
+
+  &:hover,
   &:focus,
   &.focus,
   &:active {
+    color: $white;
     box-shadow: none;
+    background-color: $blue-dark;
+  }
+}
+
+.slick-dots {
+  z-index: 5;
+  @extend .p-0;
+  @extend .m-0;
+  @extend .d-flex;
+  @extend .justify-content-center;
+
+  button {
+    border: none;
+    text-indent: -9000em;
+    border-radius: 100px;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    border: 2px solid #7c7c7c;
+    background-color: #d1d1d1;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 7.5px;
+    height: 12px;
+
+    &.slick-active button {
+      width: 15px;
+      background-color: #9f9f9f;
+    }
   }
 }

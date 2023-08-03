@@ -1,4 +1,7 @@
 form {
+  max-width: 700px;
+  margin: 0 auto;
+
   .form-control {
     border-radius: 100px;
     border: 1px solid rgba($secondary, 0.2);
@@ -10,8 +13,124 @@ form {
     line-height: 1.5;
   }
 
-  button {
-    line-height: 1.5;
+  label {
+    color: $primary;
+    letter-spacing: 0.42px;
+    font-family: $font-family-montserrat;
+    @extend .text-uppercase;
+    @extend .text-start;
+    @extend .fs-14;
+    @extend .fw-700;
+    @extend .w-100;
+
+    span {
+      @extend .d-block;
+    }
+  }
+
+  input,
+  textarea,
+  select {
     width: 100%;
+    height: 35px;
+    color: $secondary;
+    border-bottom: 3px solid $primary;
+    @extend .fs-16;
+  }
+
+  [type="submit"] {
+    border-bottom: none;
+    max-width: max-content;
+    margin: 0 auto;
+    display: table;
+    color: $white;
+    height: initial;
+  }
+
+  textarea {
+    min-height: 160px;
+    max-height: 160px;
+    height: 160px;
+  }
+
+  p {
+    margin-bottom: 30px;
+    @extend .position-relative;
+
+    span.wpcf7-spinner {
+      margin: 0;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      @extend .position-absolute;
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    z-index: 1;
+    letter-spacing: -0.5px;
+    background: #dc3232;
+    color: $white;
+    padding: 7px;
+    margin-top: -10px;
+    margin-left: 10px;
+    width: max-content;
+    @extend .position-absolute;
+    @extend .d-block;
+    @extend .fs-14;
+    @extend .lh-1;
+
+    &::before {
+      content: "";
+      width: 17px;
+      height: 17px;
+      top: -3px;
+      background: #dc3232;
+      transform: rotate(45deg);
+      border-radius: 0 30px 30px;
+      z-index: -1;
+      @extend .position-absolute;
+      @extend .d-block;
+      @extend .start-0;
+    }
+  }
+
+  &.invalid {
+    .wpcf7-response-output {
+      z-index: 9999;
+      line-height: 1.6;
+      color: $white !important;
+      background-color: #dc3232 !important;
+      @extend .start-0;
+      @extend .top-0;
+      @extend .m-0;
+      @extend .py-2;
+      @extend .w-100;
+      @extend .fw-700;
+      @extend .border-0;
+      @extend .text-center;
+      @extend .position-fixed;
+    }
+  }
+
+  &.invalid .wpcf7-response-output,
+  &.unaccepted .wpcf7-response-output,
+  &.payment-required .wpcf7-response-output {
+    color: $primary !important;
+    background-color: #ffb900 !important;
+  }
+
+  &.sent .wpcf7-response-output {
+    color: $white !important;
+    background-color: #46b450 !important;
+    @extend .start-0;
+    @extend .top-0;
+    @extend .m-0;
+    @extend .py-2;
+    @extend .w-100;
+    @extend .fw-700;
+    @extend .border-0;
+    @extend .text-center;
+    @extend .position-fixed;
   }
 }

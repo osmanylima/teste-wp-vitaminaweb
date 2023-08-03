@@ -1,3 +1,3 @@
 <?php
 
-require('pages/front-page.php');
+// require('pages/front-page.php');

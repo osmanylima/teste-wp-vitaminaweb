@@ -1,3 +1,4 @@
-<div class="page-header">
-  <h1>{!! App::title() !!}</h1>
+<div class="page-header text-center">
+  <h2>{!! App::title() !!}</h2>
+  <h3>{{ get_field('sub-titulo-page') }}</h3>
 </div>

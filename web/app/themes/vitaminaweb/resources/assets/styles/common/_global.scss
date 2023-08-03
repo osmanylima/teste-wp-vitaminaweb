@@ -6,7 +6,7 @@
   outline: none;
   border: none;
   box-sizing: border-box;
-  font-family: $font-family-base;
+  font-family: $font-family-primary;
 }
 
 html,
@@ -31,9 +31,11 @@ a {
 }
 
 p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 25px;
+  color: $secondary;
+  font-family: $font-family-primary;
+  @extend .fw-400;
 
   &:last-child {
     margin-bottom: 0 !important;
@@ -55,14 +57,16 @@ h4,
 h5,
 h6 {
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   margin-bottom: 0;
 }
 
 h2 {
-  font-size: 36px;
-  line-height: 42px;
-  font-weight: 700;
+  font-size: 50px;
+  line-height: 56.81px;
+  font-family: $font-family-light;
+  @extend .text-uppercase;
+  @extend .mb-3;
 
   @include media-breakpoint-down(lg) {
     font-size: 34px;
@@ -71,29 +75,30 @@ h2 {
 
   @include media-breakpoint-down(md) {
     font-size: 28px;
-    line-height: 38px;
+    line-height: 32px;
   }
 }
 
 h3 {
-  font-size: 32px;
-  line-height: 32px;
-  font-weight: 400;
-  font-family: $font-family-inter;
+  font-size: 27px;
+  line-height: 25px;
+  font-family: $font-family-secondary;
   @extend .ls-0;
+
+  @include media-breakpoint-down(md) {
+    font-size: 22px;
+    line-height: 24px;
+  }
 }
 
 h4 {
   font-size: 24px;
   line-height: 36px;
-  font-weight: 600;
-  font-family: $font-family-inter;
 }
 
 h6 {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 .pt-100 {
