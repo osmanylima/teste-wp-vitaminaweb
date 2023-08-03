@@ -17114,7 +17114,7 @@ Router.prototype.loadEvents = function loadEvents () {
       arrows: false,
       slidesToShow: 3,
       slidesToScroll: 1,
-      infinite: false,
+      infinite: true,
       responsive: [
         {
           breakpoint: 992,
@@ -17122,6 +17122,7 @@ Router.prototype.loadEvents = function loadEvents () {
             slidesToShow: 3,
             slidesToScroll: 1,
             centerMode: false,
+            infinite: true,
           },
         },
         {
@@ -17130,6 +17131,7 @@ Router.prototype.loadEvents = function loadEvents () {
             slidesToShow: 2,
             slidesToScroll: 1,
             centerMode: false,
+            infinite: true,
           },
         },
         {
@@ -17138,6 +17140,7 @@ Router.prototype.loadEvents = function loadEvents () {
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: false,
+            infinite: true,
           },
         } ],
     });

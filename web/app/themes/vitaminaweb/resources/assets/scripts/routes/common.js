@@ -55,7 +55,7 @@ export default {
       arrows: false,
       slidesToShow: 3,
       slidesToScroll: 1,
-      infinite: false,
+      infinite: true,
       responsive: [
         {
           breakpoint: 992,
@@ -63,6 +63,7 @@ export default {
             slidesToShow: 3,
             slidesToScroll: 1,
             centerMode: false,
+            infinite: true,
           },
         },
         {
@@ -71,6 +72,7 @@ export default {
             slidesToShow: 2,
             slidesToScroll: 1,
             centerMode: false,
+            infinite: true,
           },
         },
         {
@@ -79,6 +81,7 @@ export default {
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: false,
+            infinite: true,
           },
         },
       ],

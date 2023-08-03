@@ -141,6 +141,17 @@ if( function_exists('acf_add_options_page') ) {
   
 add_action( 'wp_footer', 'mycustom_wp_footer' );
 
+   
+add_filter('site_transient_update_plugins', 'ext_core_acf_remove_update_notification');
+// Disable ACF update notifications
+function ext_core_acf_remove_update_notification($value)
+{
+    if ($value->response) {
+        unset($value->response['advanced-custom-fields-pro/acf.php']);
+    }
+    return $value;
+}
+
 function mycustom_wp_footer() {
 ?>
     <script>
